@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - brew install neofetch
+  
+- create:
+    - ~/.config/alacritty
+    - ~/.config/nvim
+    - ~/.config/neofetch
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.gitconfig: .gitconfig
+    ~/.gdbinit: .gdbinit
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
+    ~/.config/nvim/init.lua: init.lua
+    ~/.config/neofetch/config.conf: neofetch.conf
+    ~/.alacritty: .alacritty.yaml
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
