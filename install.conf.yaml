@@ -1,13 +1,21 @@
 - defaults:
     link:
       relink: true
+      #force: true 
+
 
 - clean: ['~']
 
 - shell:
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  - brew install neofetch
-  
+  - brew install neofetch # MacOS
+  - brew install --cask font-droid-sans-mono-nerd-font # MacOs
+  - brew install bat #MacOs
+  - brew install vivid
+  - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  - git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
+
 - create:
     - ~/.config/alacritty
     - ~/.config/nvim
