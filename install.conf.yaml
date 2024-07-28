@@ -8,6 +8,7 @@
 
 - shell:
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - mkdir ~/code
   - brew install neofetch # MacOS
   - brew install --cask font-droid-sans-mono-nerd-font # MacOs
   - brew install bat #MacOs

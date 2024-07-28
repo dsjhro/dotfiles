@@ -14,6 +14,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Experiment 
+local sidebar = require("sidebar-nvim")
+local opts = {open = true}
+sidebar.setup(opts)
+
 require('lazy').setup({
 
   -- Git related plugins
